@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.6.1/maptiler-sdk.umd.min.js"></script>
+    <link
+      href="https://cdn.maptiler.com/maptiler-sdk-js/v3.6.1/maptiler-sdk.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Boilerplate</title>
+  </head>
+  <body class="d-flex flex-column vh-100">
+    <%- include('../partials/navbar.ejs') %>
+    <main class="container mb-5">
+      <%- include('../partials/flash.ejs') %> <%- body %>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+    <!-- using <%- %> this tag here Because body contains HTML, and we want to render that HTML directly. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/validationForm.js"></script>
+  </body>
+</html>
