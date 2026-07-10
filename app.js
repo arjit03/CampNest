@@ -88,15 +88,15 @@ const sessionConfig = {
     // The cookie will expire 1 week after it is set.
   },
 };
-app.use(flash()); // initializing flash.
 // app.use(helmet());
 app.engine("ejs", ejsMate);
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(express.static("public")); // serving public folder to the server
+app.use(express.static(path.join(__dirname, "public"))); // serving public folder to the server
 app.use(session(sessionConfig));
+app.use(flash()); // initializing flash.
 app.use(passport.initialize()); // initilizing passport. so we can use req.passport methods!
 app.use(passport.session()); // allows persistent user logged in during future request using session
 
