@@ -2,7 +2,11 @@ const Campground = require("../models/campground");
 const mongoose = require("mongoose");
 const cities = require("./cities");
 const { descriptors, places } = require("./seedHelpers");
-require("dotenv").config();
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config(); // requiring the dotenv module we installed (npm i dotenv)
+  // and using its .config() method, which attaches key value pairs inside the .env file to process.env.
+  // basically parses it.
+}
 
 mongoose.connect(process.env.DB_URL);
 mongoose.connection.on("error", (err) => {
