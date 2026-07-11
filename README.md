@@ -2,7 +2,7 @@
 
 CampNest is a full-stack campground-listing web app in the spirit of Yelp — users can browse campgrounds, view them on a map, and sign up to add their own listings with photos, pricing, and location. Logged-in users can leave star ratings and written reviews on any campground.
 
-**Live demo:** https://camp-nest-five.vercel.app
+**Live demo:** https://camp-nest-six.vercel.app
 
 ## Features
 
