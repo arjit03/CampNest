@@ -16,8 +16,10 @@
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" href="/campgrounds">Campgrounds</a>
-        <a class="nav-link" href="/campgrounds/new">New Campgrounds</a>
+        <a class="nav-link" href="/campgrounds">Home</a>
+<% if(currentUser){ %>
+        <a class="nav-link" href="/campgrounds/new">Create Campgrounds</a>
+ <% } %>
       </div>
       <div class="navbar-nav ms-auto">
       <% if(!currentUser){ %>
